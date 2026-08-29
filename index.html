@@ -491,10 +491,14 @@ a:focus-visible, button:focus-visible{
 
 .contact-visual{
   background:var(--paper-deep); border-radius:var(--radius-lg);
-  padding:var(--space-6); display:flex; align-items:center; justify-content:center;
-  min-height:220px;
+  padding:0; display:flex; align-items:center; justify-content:center;
+  min-height:220px; overflow:hidden;
 }
 .contact-visual svg{ width:100%; max-width:220px; color:var(--terracotta); }
+.contact-visual img{
+  display:block; width:100%; height:clamp(360px,46vw,520px);
+  object-fit:cover; object-position:center 18%;
+}
 
 /* ============ footer ============ */
 .site-footer{ background:var(--ink); color:var(--on-ink-dim); padding-block:var(--space-6) var(--space-4); }
@@ -1130,12 +1134,7 @@ body{
       </div>
 
       <div class="contact-visual" data-reveal="2">
-        <svg viewBox="0 0 200 220" fill="none">
-          <rect x="20" y="20" width="160" height="180" rx="18" stroke="#A74332" stroke-width="1.6" stroke-dasharray="3 6"/>
-          <circle cx="100" cy="90" r="34" stroke="#D69A32" stroke-width="1.6"/>
-          <path d="M84 90h32M100 74v32" stroke="#7F2F24" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M60 150c8-4 16-4 24 0M92 155c8-4 16-4 24 0M124 150c8-4 16-4 24 0" stroke="#718064" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
+        <img src="chef%20phto.png" alt="Rasiko chef" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
